@@ -14,8 +14,8 @@
   <title>Inline JavaScript</title>
 </head>
 
-<body onload="console.log(prompt('Care este numele meu?'));">
-
+<body onload="alert('Bun venit pe site!');">
+  <!-- console.log(prompt('Care este numele meu?')); -->
   <button
     onclick="alert('Bine ai venit la Pixellab!');"
     type="button"
@@ -27,6 +27,21 @@
     type="button"
     onclick="alert('Blaaaaaaaaaaaa');"
   >apasa apasa</button>
+
+  <br>
+
+  <button
+    type="button"
+    onclick="console.log(20 + 156)"
+  >Calculeaza suma</button>
+
+  <br>
+
+  <button
+    type="button"
+    onmouseover="console.log('apasa apasa apasa');"
+    onclick="alert('ai apasaaaaat');"
+  > Apasa</button>
 </body>
 
 </html>
