@@ -25,6 +25,7 @@
       surname: 'Iosub',
       age: 32,
       petOwner: true,
+      carOwner: false,
     };
 
     console.warn('Afiseaza fraza “Ma numesc xxx yyy si am xx ani.” in consola folosind operatorul de concatenare');
@@ -36,6 +37,12 @@
     // console.warn('');
     console.log(object.name);
     console.log(object.age);
+
+    console.warn('Afiseaza fraza “xxx yyy are xx ani.” in consola folosind operatorul de concatenare');
+    console.log(object.name + ' ' + object.surname + ' are ' + object.age + ' ani.');
+
+    console.warn('Afiseaza fraza “xxx yyy are xx ani.” in consola folosind operatorul de concatenare');
+    console.log(object.name + ' s-a nascut in ' + (2021 - object.age).toString());
   </script>
 
   <div

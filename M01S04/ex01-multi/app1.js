@@ -17,3 +17,7 @@ if (isNaN(value)) {
   }
 }
 paragraphElement.innerText = message;
+
+console.warn(
+  'Afiseaza fraza “Ma numesc xxx yyy si am xx ani.” in consola folosind operatorul de concatenare ',
+);
