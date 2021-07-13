@@ -27,9 +27,56 @@ var i;
 //   console.log(i);
 // }
 
-for (i = 0; i <= 100; i++) {
-  if (i % 5 !== 0) {
-  continue;
+// for (i = 0; i <= 100; i++) {
+//   if (i % 5 !== 0) {
+//     continue;
+//   }
+//   console.log(i);
+// }
+
+console.warn('Modifica exemplul astfel incat bucla sa numere de la 1 la 89.');
+
+for (let i = 1; i <= 89; i++) {
+  console.log(i);
+}
+
+console.warn('Modifica exemplul astfel incat bucla sa numere de la 1 la 88 .');
+
+for (let i = 1; i < 89; i++) {
+  console.log(i);
+}
+
+console.warn(
+  'Folosind keywordul break opreste bucla atunci cand numarul este egal cu 42.',
+);
+
+for (let i = 1; i < 89; i++) {
+  console.log(i);
+
+  if (i >= 42) {
+    break;
   }
-    console.log(i);
+}
+// interesant ca daca am facut cu else console.log(i) nu mai apuca sa scrie 42 pt ca facea break inainte
+
+console.warn(
+  'Folosind keywordul continue, afiseaza doar numele impare intre 1 si 89.',
+);
+
+for (let i = 1; i <= 89; i++) {
+  if (i % 2 === 0) {
+    continue;
   }
+  console.log(i);
+}
+
+console.warn(
+  'In mod similar, afiseaza doar numerele care sunt divizibile cu 3.',
+);
+
+for (let i = 1; i <= 89; i++) {
+  if (i % 3 !== 0) {
+    continue;
+  }
+  console.log(i);
+}

@@ -1,7 +1,7 @@
 const person = {
   name: 'Maria',
   surname: 'Iosub',
-  age: 31,
+  age: 32,
   petOwner: true,
   skills: {
     html: true,
@@ -57,3 +57,75 @@ friendsKeys
 
     console.log(`${surname} ${name}`);
   });
+
+console.warn(
+  'Afiseaza propozitia: “Prietenii mei sunt Larry, Steven si Carol.” folosind Object.keys()',
+);
+
+let myFriends = 'Prietenii mei sunt ';
+friendsKeys.forEach(function (friendKey, i, friendsKeys) {
+  const { name } = person.friends[friendKey];
+  punctuation = ', ';
+  if (i === friendsKeys.length - 1) {
+    punctuation = '.';
+  }
+  myFriends += `${name}${punctuation}`;
+});
+
+console.log(myFriends);
+
+console.warn(
+  'Folosind bucla, afiseaza mai multe propozitii (cate una per console.log()) care sa afiseze: “Diferenta de varsta intre Larry si Dragos este de xxx ani.” etc…',
+);
+
+friendsKeys.forEach(function (friendKey) {
+  const { name, age } = person.friends[friendKey];
+  const ageDiff = person.age - age;
+  console.log(
+    `Diferenta de varsta intre ${name} si ${person.name} este de ${ageDiff} ani.`,
+  );
+});
+
+console.warn(
+  'Folosind Object.keys() pe proprietatea skills, afiseaza toate abilitatile din obiectul skills.',
+);
+
+skillsKeys.forEach(function (skillKey) {
+  console.log(skillKey);
+});
+
+console.warn(
+  'Prin aceeasi metoda, afiseaza o lista cu numele complet al prietenilor. ',
+);
+
+friendsKeys.forEach(function (friendKey) {
+  const { name, surname } = person.friends[friendKey];
+  console.log(`${name} ${surname}`);
+});
+
+console.warn(
+  'Afiseaza propozitia: “Prietenii mei sunt Larry Larryson, Steven Stevenson si Carol Carolson.” folosind Object.keys()',
+);
+
+let friensText = 'Prietenii mei sunt ';
+friendsKeys.forEach(function (friendKey, i, friendsKeys) {
+  const { name, surname } = person.friends[friendKey];
+  punctuation = ', ';
+  if (i === friendsKeys.length - 1) {
+    punctuation = '.';
+  }
+  friensText += `${name} ${surname}${punctuation}`;
+});
+
+console.log(friensText);
+
+console.warn(
+  'Folosind bucla, afiseaza mai multe propozitii (cate una per console.log()) care sa afiseze: “Larry are xx ani. Steven are …”',
+);
+
+friendsKeys.forEach(function (frirndKey) {
+  const { name, age } = person.friends[frirndKey];
+  console.log(`${name} are ${age} ani.`);
+});
+
+// chestiile astea cu Object.keys nu mi-au placut de loc :))
